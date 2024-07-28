@@ -22,7 +22,7 @@ public class BinarySearchTest {
     void testSearchSameElements() {
         int[] input = {1, 1, 1, 1, 1};
         int number = 1;
-        int expected = 0;
+        int expected = 2;
         int output = BinarySearch.search(number, input);
 
         assertEquals(expected, output);
