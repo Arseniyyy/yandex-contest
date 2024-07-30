@@ -1,50 +1,40 @@
 package com.arsenydeveloper.other;
 
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 /**
  * CheckIfStringIsAnagram
  */
 public class AnagramChecker {
 
-    public static void main(String[] args) {
-        check("aabcabc", "ccbbaaa");
+    public static void main(String[] args) throws Exception {
+        System.out.println(check("daaabbbc", "aaabbcbd"));
     }
 
-    public static void check(String s1, String s2) {
-        List<Integer> l1 = new ArrayList<>();
-        List<Integer> l2 = new ArrayList<>();
+    // public static boolean check(String s1, String s2) throws Exception {
+    //     if (s1.length() != s2.length()) {
+    //         throw new Exception("Strings must be the same length.");
+    //     }
 
-        Map<Character, Integer> map1 = new HashMap<>();
-        Map<Character, Integer> map2 = new HashMap<>();
+    //     char[] s1CharArr = s1.toCharArray();
+    //     char[] s2CharArr = s2.toCharArray();
+    //     char[][] charArrays = {s1CharArr, s2CharArr};
 
-        char[] stringAsArr1 = s1.toCharArray();
-        char[] stringAsArr2 = s2.toCharArray();
+    //     for (char[] arr : charArrays) {
+    //         Arrays.sort(arr);
+    //     }
 
-        for (int i = 0; i < stringAsArr1.length; i++) {
-            int amount = map1.getOrDefault(stringAsArr1[i], 0);
-            map1.put(stringAsArr1[i], amount + 1);
+    //     return Arrays.equals(s1CharArr, s2CharArr);
+    // }
+
+    public static boolean check(String s1, String s2) {
+        int MAX_VAL = 8;
+        int[] arr = {1, 1, 1, 5, 5, 4, 8, 6, 2, 1, 1, 0};
+        int[] count = new int[MAX_VAL + 1];
+
+        for (int i = 0; i < count.length; i++) {
+            count[]
         }
-
-        for (int i = 0; i < stringAsArr2.length; i++) {
-            int amount = map2.getOrDefault(stringAsArr2[i], 0);
-            map2.put(stringAsArr2[i], amount + 1);
-        }
-
-        for (Map.Entry<Character, Integer> entry : map1.entrySet()) {
-            int amount = entry.getValue();
-            l1.add(amount);
-        }
-
-        for (Map.Entry<Character, Integer> entry : map2.entrySet()) {
-            int amount = entry.getValue();
-            l2.add(amount);
-        }
-
-        System.out.println(l1);
-        System.out.println(l2);
     }
 }
